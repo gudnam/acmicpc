@@ -15,8 +15,7 @@ public class ATM {
             peopleList.add(scanner.nextInt());
         }
 
-        Ascending ascending = new Ascending();
-        Collections.sort(peopleList, ascending);
+        Collections.sort(peopleList);
 
         int sum = 0;
         int time = 0;
@@ -26,14 +25,5 @@ public class ATM {
         }
 
         System.out.println(sum);
-    }
-
-    static class Ascending implements Comparator<Integer> {
-
-        @Override
-        public int compare(Integer o1, Integer o2) {
-            return o1.compareTo(o2);
-        }
-
     }
 }
